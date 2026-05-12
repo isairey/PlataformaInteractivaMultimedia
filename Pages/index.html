@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click - My List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts Roboto-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="../Assets/Images/click-logo-pictoral.png" type="image/x-icon">
+
+</head>
+<body>
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <img src="../Assets/Images/click-logo-transparent.png" class="navbar-logo" alt="Logo">
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()" style="border: none; background: none; padding: 0">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Library</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="watchlist.html">My List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="flexHomeContainer1">
+        <div class="carousel-container-home-header">
+            <div class="carousel-home">
+                <div class="carousel-item active">
+                    <img src="../assets/Images/Godzille&Kong.png" alt="Image 1">
+                    <div class="overlay_text_header">
+                        Godzilla x Kong: The New Empire
+                        <br>
+                        Adam Wingard
+                        <br>
+                        PG-13
+                        <br>
+                        1h 55m
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/Images/MadamWeb.png" alt="Image 2">
+                    <div class="overlay_text_header">
+                        Madame Web
+                        <br>
+                        S.J. Clarkson
+                        <br>
+                        PG-13 
+                        <br>
+                        1h 56m</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/Images/Damsel.png" alt="Image 3">
+                    <div class="overlay_text_header">
+                        Damsel
+                        <br>
+                        Juan Carlos Fresnadillo
+                        <br>
+                        PG-13 
+                        <br>
+                        1h 50m</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/Images/Dune2.png" alt="Image 4">
+                    <div class="overlay_text_header">
+                        Dune: Part Two
+                        <br>
+                        Denis Villeneuve
+                        <br>
+                        PG-13
+                        <br>
+                        2h 46m</div>
+                </div>
+            </div>
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+            
+            <!-- Move the indicators here, outside the .carousel div -->
+            <div class="flexDotContainer">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    
+
+<div class="flexContinueWatchingContainer">
+    <div class="container">
+        <h1>Continue Watching</h1>
+    </div>
+    <div class="flexCardContainer1">
+    <div class="card">
+        <img src="../assets/Images/Beetlejuice.png" class="card-img" alt="...">
+        <div class="flexIconsContainer">
+        <a href="" target="individual_movies_page"><ion-icon name="information-circle-outline"></ion-icon></a> <!--LOOK AT THIS BEFORE HAND IN!!! THIS MUST TAKE THE USER TO THE INDIVIDUAL MOVIES PAGE-->
+        
+        <div class="dropdown">
+            <ion-icon name="ellipsis-vertical"></ion-icon> <!--filled-->
+            <div class="dropdown-content">
+              <div class="roboto-bold">Movies/Series</div>
+                <button class="download">
+                    <img src="../assets/icons/download_outline.png">
+                    <div class="roboto-bold">Download</div>
+                </button>
+                
+                <button class="dislike">
+                    <img src="../assets/icons/thumbs_down_outline.png">
+                    <div class="roboto-bold">Dislike</div>
+                </button>
+                <button class="like">
+                    <img src="../assets/icons/thumbs_up_outline.png">
+                    <div class="roboto-bold">Like</div>
+                </button>
+                <button class="love_this"><img src="../assets/icons/heart_outline.png">
+                    <div class="roboto-bold">Love this</div>
+            </button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <div class="card">
+        <img src="../assets/Images/BeetlejuiceBeetlejuice.png" class="card-img" alt="...">
+        <div class="flexIconsContainer">
+        <a href="" target="individual_movies_page"><ion-icon name="information-circle-outline"></ion-icon></a> <!--LOOK AT THIS BEFORE HAND IN!!! THIS MUST TAKE THE USER TO THE INDIVIDUAL MOVIES PAGE-->
+        
+        <div class="dropdown">
+            <ion-icon name="ellipsis-vertical"></ion-icon> <!--filled-->
+            <div class="dropdown-content">
+              <div class="roboto-bold">Movies/Series</div>
+                <button class="download">
+                    <img src="../assets/icons/download_outline.png">
+                    <div class="roboto-bold">Download</div>
+                </button>
+                
+                <button class="dislike">
+                    <img src="../assets/icons/thumbs_down_outline.png">
+                    <div class="roboto-bold">Dislike</div>
+                </button>
+                <button class="like">
+                    <img src="../assets/icons/thumbs_up_outline.png">
+                    <div class="roboto-bold">Like</div>
+                </button>
+                <button class="love_this"><img src="../assets/icons/heart_outline.png">
+                    <div class="roboto-bold">Love this</div>
+            </button>
+            </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="../assets/Images/TheAdamaFamily.png" class="card-img" alt="...">
+        <div class="flexIconsContainer">
+        <a href="" target="individual_movies_page"><ion-icon name="information-circle-outline"></ion-icon></a> <!--LOOK AT THIS BEFORE HAND IN!!! THIS MUST TAKE THE USER TO THE INDIVIDUAL MOVIES PAGE-->
+        
+        <div class="dropdown">
+            <ion-icon name="ellipsis-vertical"></ion-icon> <!--filled-->
+            <div class="dropdown-content">
+              <div class="roboto-bold">Movies/Series</div>
+                <button class="download">
+                    <img src="../assets/icons/download_outline.png">
+                    <div class="roboto-bold">Download</div>
+                </button>
+                
+                <button class="dislike">
+                    <img src="../assets/icons/thumbs_down_outline.png">
+                    <div class="roboto-bold">Dislike</div>
+                </button>
+                <button class="like">
+                    <img src="../assets/icons/thumbs_up_outline.png">
+                    <div class="roboto-bold">Like</div>
+                </button>
+                <button class="love_this"><img src="../assets/icons/heart_outline.png">
+                    <div class="roboto-bold">Love this</div>
+            </button>
+            </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="../assets/Images/EdwardScissorHands.png" class="card-img" alt="...">
+        <div class="flexIconsContainer">
+        <a href="" target="individual_movies_page"><ion-icon name="information-circle-outline"></ion-icon></a> <!--LOOK AT THIS BEFORE HAND IN!!! THIS MUST TAKE THE USER TO THE INDIVIDUAL MOVIES PAGE-->
+
+        <!--Dropdown-->
+        <div class="dropdown">
+            <ion-icon name="ellipsis-vertical"></ion-icon> <!--filled-->
+            <div class="dropdown-content">
+                <div class="roboto-bold">Movies/Series</div>
+
+                <button class="download">
+                    <img src="../assets/icons/download_outline.png">
+                    <div class="roboto-bold">Download</div>
+                </button>
+                
+                <button class="dislike">
+                    <img src="../assets/icons/thumbs_down_outline.png">
+                    <div class="roboto-bold">Dislike</div>
+                </button>
+                <button class="like">
+                    <img src="../assets/icons/thumbs_up_outline.png">
+                    <div class="roboto-bold">Like</div>
+                </button>
+                <button class="love_this"><img src="../assets/icons/heart_outline.png">
+                    <div class="roboto-bold">Love this</div>
+            </button>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+</div>
+</section>
+
+    
+<section>
+      <div class="container">
+        <h1>My List</h1>
+        <div id="poster-4"></div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h1>We think you'll love these!</h1>
+        <div id="poster-20"></div>
+    </div>
+</section>
+
+<section>
+        <div class="container">
+            <h1>Today's Top 3</h1>
+        </div>
+        <div class="flexMostPopularMoviesContainer">
+            <div class="text1">1</div>
+                <div class="flexPopularItem1">
+                    <div class="flexPopularItem1Text"><div class="roboto-bold-white">Don't Move</div>
+                    <img src="../assets/Images/DontDie.png" alt="">
+                </div>
+            </div>
+    
+            <div class="text1">2</div>
+                <div class="flexPopularItem1">
+                    <div class="flexPopularItem1Text"><div class="roboto-bold-white">Woman of the Hour</div>
+                    <img src="../assets/Images/WomanByTheHour.png" alt="">
+                </div>
+            </div>
+    
+            <div class="text1">3</div>
+                <div class="flexPopularItem1">
+                    <div class="flexPopularItem1Text"><div class="roboto-bold-white">Trap</div>
+                    <img src="../assets/Images/Trap.png" alt="">
+                </div>
+            </div>
+        </div>
+</section>
+
+ <!-- Back to Top Button -->
+ <button id="back-to-top"><span>&#x21E7;</span></button>
+    
+<div class="container">
+    <div class="flexMoreContentContainer">
+        <button class="view_more">View More</button>
+    </div>
+    
+    <div id="poster-4"></div>
+</div>
+
+    <!-- Footer Section -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Links Section -->
+            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                <nav class="nav justify-content-center justify-content-md-end">
+                    <a class="nav-link text-white" href="../index.html">Home</a>
+                    <a class="nav-link text-white" href="library.html">Library</a>
+                    <a class="nav-link text-white" href="watchlist.html">My List</a>
+                </nav>
+            </div>
+            <!-- Logo Section -->
+            <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                <a href="#">
+                    <img src="/Assets/images/click-logo-pictoral.png" alt="Logo" class="img-fluid custom-footer-logo" style="max-width: 100px;">
+                </a>
+            </div>
+            <!-- Right Links Section -->
+            <div class="col-12 col-md-4">
+                <nav class="nav justify-content-center justify-content-md-start">
+                    <a class="nav-link text-white" href="">About</a>
+                    <a class="nav-link text-white" href="">Legal</a>
+                    <a class="nav-link text-white" href="">Account</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+ <!-- JS iconsicons-->
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="home.js"></script>
+        <script>
+          function toggleNavbar() {
+              const navbarContent = document.getElementById('navbarContent');
+              navbarContent.classList.toggle('show');
+          }
+      </script>
+</body>
+</html>
+
+
+    

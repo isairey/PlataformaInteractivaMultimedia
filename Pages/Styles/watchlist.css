@@ -1,0 +1,351 @@
+body {
+    max-width: 100%;
+    background-color: #000;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin: 40px 0 0 90px;
+    color: white;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 22px 0 22px 0;
+}
+
+.roboto-bold, .roboto-bold-white {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.roboto-bold-white {
+    color: white;
+}
+
+:root {
+    --gradient-shadow: linear-gradient(
+        45deg,
+        #00ff00,
+        #00e600,
+        #00cc00,
+        #00ff00,
+        #00e600
+    );
+}
+
+.navbar {
+    width: 80%;
+    max-width: 600px;
+    height: 60px;
+    margin: 0;
+    padding: 0 40px;
+    border-radius: 35px;
+    background-color: #ffffffc8;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 7%; /* Keeps the navbar in your original position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border: 1px solid transparent; /* Make border transparent for glow effect */
+}
+
+.navbar:before,
+.navbar:after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Ensures it matches the exact size of .navbar */
+    background: var(--gradient-shadow);
+    background-size: 400%;
+    z-index: -1;
+    border-radius: 35px;
+    animation: animate 10s linear infinite;
+}
+
+.navbar:after {
+    filter: blur(8px); /* Controls the glow intensity */
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.navbar .nav-item a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.navbar-logo {
+    height: 70px; 
+    margin-right: 15px; 
+    
+}
+
+
+
+
+.form-control {
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.container h1 {
+    margin: 30px;
+}
+
+#poster-4, #poster-20 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#poster-4 div, #poster-20 div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#poster-4 p, #poster-20 p {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 267px;
+}
+
+.img-responsive {
+    width: 267px; 
+    height: 400px;
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+.img-responsive:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  /* Ensure the navbar spans the full width on mobile and adjusts padding */
+.navbar {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 30px;
+    padding: 0px 20px;
+    top: 5%;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-logo {
+    margin-top: -5px;
+}
+
+/* Style the navbar-toggler (hamburger button) */
+.navbar-toggler {
+    border: none; /* Remove default border */
+    color: #000; /* Ensure icon color is visible */ 
+    font-size: 1.5rem; /* Increase size if needed */
+}
+
+/* Make the dropdown menu visible on mobile */
+.navbar-collapse {
+    background-color:#ffffff; /* Add background color */
+    padding: 15px; /* Add padding for spacing */
+    border-radius: 30px 30px; /* Round bottom corners */
+    color: #000000;
+    
+}
+
+/* Ensure the dropdown is positioned below the navbar */
+.navbar-collapse.collapse {
+    position: absolute; /* Set to absolute to control position */
+    top: 65px; /* Adjust to sit just below the navbar */
+    width: 100%;
+    left: 0;
+    
+}
+
+/* Display the collapse menu as a column on mobile */
+.navbar-nav {
+    flex-direction: column;
+    gap: 10px; /* Space between menu items */
+    align-items: center; /* Center-align items */
+    transition: ease-in-out 1s;
+}
+
+.nav-link {
+    color: #000; /* Color for links */
+    font-size: 1.1em;
+}
+    .img-responsive {
+        width: auto; 
+        height: 200px;
+        margin: 0 10px;
+    }
+
+    #poster-4 div, #poster-20 div {
+        overflow-x: scroll;
+    }
+
+    #poster-4 p, #poster-20 p {
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+        width: 133px;
+        font-weight: 200;
+    }
+
+    .img-responsive {
+        width: 267px; 
+        height: 400px;
+        transition: transform 0.2s;
+        border-radius: 10px;
+    }
+    
+    .img-responsive:hover {
+        transform: scale(1.05);
+    }
+
+    .info-buttons {
+        position: absolute; /* Ensure it's positioned over the image */
+        bottom: 20px; /* Distance from the bottom of the image */
+        right: 30px; /* Distance from the left of the image */
+        display: none; /* Arrange items in a row */
+        gap: 10px; /* Space between the "Rating" and "Year" */
+    }
+    
+    .rating-button, .year-button, .runtime-button, .age-rating-button {
+        background: rgba(215, 215, 215, 0.913); /* Individual backgrounds */
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    #poster-4 p, #poster-20 p {
+        font-size: 1em;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px;
+        width: 267px;
+    }
+}
+
+.info-buttons {
+    position: absolute; /* Ensure it's positioned over the image */
+    bottom: 60px; /* Distance from the bottom of the image */
+    right: 30px; /* Distance from the left of the image */
+    display: none; /* Arrange items in a row */
+    gap: 10px; /* Space between the "Rating" and "Year" */
+}
+
+.rating-button, .year-button, .runtime-button, .age-rating-button {
+    background: rgba(215, 215, 215, 0.913); /* Individual backgrounds */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.movie-card {
+    position: relative; 
+    display: inline-block;
+    margin: 15px;
+}
+
+.movie-card:hover .info-buttons {
+    display: flex; 
+    position: absolute; /* Ensure it's positioned over the image */
+    bottom: 60px; /* Distance from the bottom of the image */
+    right: 30px; 
+}
+
+.no-movies {
+    color: white; /* Or any color you prefer */
+    text-align: center;
+    font-size: 40px;
+    margin: 20px auto; /* Centers the message */
+}
+
+#poster-4 svg,
+#poster-20 svg {
+    margin-left: auto; /* Adjust spacing for icons */
+    cursor: pointer; 
+    display: flex; /* Change to inline-block for better alignment */
+    width: 24px; /* Set a consistent width for icons */
+    height: 24px; /* Set a consistent height for icons */
+}
+
+.add-bookmark,
+.remove-bookmark {
+    fill: rgb(0, 0, 0); /* Ensures the icons are visible */
+    stroke: white; /* Set the stroke color to white */
+}
+
+.fa-bars, .bi-list {
+    font-size: 24px; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler:hover {
+    border: none;
+    background: none;
+    box-shadow: none;
+    outline: none; /* Removes the focus outline */
+  }
+
+  
+#view-more{
+    display: block;
+    margin: 50px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(45, 45, 45);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#view-more:hover {
+    color: #8BE67D;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Click - My List</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Google Fonts Roboto-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="./Styles/watchlist.css" rel="stylesheet">
+        <link href="./Styles/library.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+        <link rel="icon" href="../Assets/Images/click-logo-pictoral.png" type="image/x-icon">
+    
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <img src="../Assets/Images/click-logo-transparent.png" class="navbar-logo" alt="Logo">
+            <button class="navbar-toggler" type="button" onclick="toggleNavbar()" style="border: none; background: none; padding: 0">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="watchlist.html">My List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="slideshow-inner" id="slideshow-inner">
+            <!-- Movie slides will be dynamically added here -->
+        </div>
+        <div class="slideshow-dots" id="slideshow-dots">
+            <!-- Navigation dots for the slideshow -->
+        </div>
+    </div>
+
+    <!-- Genre Filter Dropdown -->
+    <div id="filter-container">
+        <select id="genre-filter">
+            <option value="">All Genres</option>
+        </select>
+    </div>
+
+    <!-- Container for Movie Sections -->
+    <div id="movie-sections" class="container"></div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top"><span>&#x21E7;</span></button>
+    
+    <!-- Load More Movies Button -->
+    <button id="load-more">view more</button>
+
+    <!-- Footer Section -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Links Section -->
+            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                <nav class="nav justify-content-center justify-content-md-end">
+                    <a class="nav-link text-white" href="../index.html">Home</a>
+                    <a class="nav-link text-white" href="library.html">Library</a>
+                    <a class="nav-link text-white" href="watchlist.html">My List</a>
+                </nav>
+            </div>
+            <!-- Logo Section -->
+            <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                <a href="#">
+                    <img src="/Assets/images/click-logo-pictoral.png" alt="Logo" class="img-fluid custom-footer-logo" style="max-width: 100px;">
+                </a>
+            </div>
+            <!-- Right Links Section -->
+            <div class="col-12 col-md-4">
+                <nav class="nav justify-content-center justify-content-md-start">
+                    <a class="nav-link text-white" href="">About</a>
+                    <a class="nav-link text-white" href="">Legal</a>
+                    <a class="nav-link text-white" href="">Account</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- jQuery Library -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="Scripts/library.js"></script>
+
+<!-- Script to Handle Navbar Toggle on Mobile -->
+<script>
+    function toggleNavbar() {
+        const navbarContent = document.getElementById('navbarContent');
+        navbarContent.classList.toggle('show');
+    }
+</script>
+</body>
+</html>

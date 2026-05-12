@@ -1,0 +1,310 @@
+/* Base styles for the entire website */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+
+/* Styles for the slideshow section */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.slideshow-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 70vh; /* Adjusted height for better display */
+    object-fit: cover;
+}
+
+/* Styling for slideshow navigation dots */
+.slideshow-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c2c2c9b;
+    border-radius: 20px;
+    padding: 5px 10px;
+    backdrop-filter: blur(8px);
+}
+
+.slideshow-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #494949;
+    border: 1px #3bff59;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slideshow-dot.active {
+    background-color: #3bff59;
+    
+}
+
+/* Container for movie sections */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-top: 5px; /* Reduced top margin */
+}
+
+/* Styling for the genre filter dropdown */
+#filter-container {
+    text-align: center;
+    margin-top: 10px; /* Slightly smaller margin */
+    margin-left: -10px; 
+}
+
+#filter-container select {
+    font-size: 16px;
+    padding: 15px;
+    margin: 5px;
+    background-color: #494949;
+    border: 0;
+    color: #ffffff;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+  
+}
+
+#filter-container select:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/* Movie card layout and styling */
+.movie-card {
+    position: relative;
+    width: 250px;
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+.movie-card img:hover {
+    transform: scale(1.05);
+}
+
+.movie-card p {
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-card .add-to-bookmark {
+    margin-left: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    fill: rgb(0, 0, 0);
+    stroke: white;
+}
+
+.movie-card:hover .info-buttons {
+    display: flex;
+}
+
+.info-buttons {
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rating-button,
+.year-button,
+.runtime-button,
+.age-rating-button {
+    background: rgba(215, 215, 215, 0.913);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Slider container styling */
+.slider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.poster-row {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: calc(250px * 4 + 20px * 3);
+}
+
+.poster-item {
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+/* Navigation buttons for sliders */
+.prev,
+.next {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 48px;
+    cursor: pointer;
+    width: 60px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.prev:hover,
+.next:hover {
+    color: #8BE67D;
+}
+
+/* Grid layout for displaying selected genre movies */
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    box-sizing: border-box;
+}
+
+/* Styling for "Load More" and "Back to Top" buttons */
+#load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(45, 45, 45);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#load-more:hover {
+    color: #8BE67D;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #72c565;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    fill:#000;
+}
+
+#back-to-top:hover {
+    background-color: #8BE67D;
+}
+
+/* Adjustments for medium-sized screens */
+@media (max-width: 1024px) {
+    .poster-row {
+        width: calc(250px * 3 + 20px * 2);
+    }
+
+    .grid-item {
+        flex: 1 1 calc(33.33% - 40px);
+        max-width: calc(33.33% - 40px);
+    }
+}
+
+/* Adjustments for tablets and small desktops */
+@media (max-width: 768px) {
+    .movie-card {
+        width: 180px;
+    }
+
+    .poster-item {
+        min-width: 180px;
+        margin-right: 10px;
+    }
+
+    .poster-row {
+        width: calc(180px * 2 + 10px * 1);
+    }
+
+    .info-buttons {
+        bottom: 50px;
+        right: 5px;
+    }
+
+    .rating-button,
+    .year-button,
+    .runtime-button,
+    .age-rating-button {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .prev,
+    .next {
+        font-size: 36px;
+    }
+
+    .grid-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+/* Adjustments for mobile phones */
+@media (max-width: 480px) {
+    .grid-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+}

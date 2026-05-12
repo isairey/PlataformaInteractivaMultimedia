@@ -1,0 +1,762 @@
+body {
+   
+    max-width: 100%;
+    background: linear-gradient(to top, rgba(0, 189, 0, 0.735), #000);
+    background-color: #000;
+    background-position: scroll;
+    /* Green glow at bottom fading to black */
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin: 40px 0 0 90px;
+    color: white;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 22px 0 22px 0;
+}
+
+.roboto-bold, .roboto-bold-white {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.roboto-bold-white {
+    color: white;
+}
+
+  .text1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 400px;
+    font-style: normal;
+    color: white;
+    align-items: flex-start;
+    margin: 40px;
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+  
+
+:root {
+    --gradient-shadow: linear-gradient(
+        45deg,
+        #00ff00,
+        #00e600,
+        #00cc00,
+        #00ff00,
+        #00e600
+    );
+}
+
+.navbar {
+    width: 80%;
+    max-width: 600px;
+    height: 60px;
+    margin: 0;
+    padding: 0 40px;
+    border-radius: 35px;
+    background-color: #ffffffc8;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 7%; /* Keeps the navbar in your original position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border: 1px solid transparent; /* Make border transparent for glow effect */
+}
+
+.navbar:before,
+.navbar:after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Ensures it matches the exact size of .navbar */
+    background: var(--gradient-shadow);
+    background-size: 400%;
+    z-index: -1;
+    border-radius: 35px;
+    animation: animate 10s linear infinite;
+}
+
+.navbar:after {
+    filter: blur(8px); /* Controls the glow intensity */
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.navbar .nav-item a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.navbar-logo {
+    height: 70px; 
+    margin-right: 15px; 
+    
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.container h1 {
+    margin: 30px;
+}
+
+#poster-4, #poster-20 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#poster-4 div, #poster-20 div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#poster-4 p, #poster-20 p {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 267px;
+}
+
+.img-responsive {
+    width: 267px; 
+    height: 400px;
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+.img-responsive:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  /* Ensure the navbar spans the full width on mobile and adjusts padding */
+.navbar {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 30px;
+    padding: 0px 20px;
+    top: 5%;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-logo {
+    margin-top: -5px;
+}
+
+/* Style the navbar-toggler (hamburger button) */
+.navbar-toggler {
+    border: none; /* Remove default border */
+    color: #000; /* Ensure icon color is visible */ 
+    font-size: 1.5rem; /* Increase size if needed */
+}
+
+/* Make the dropdown menu visible on mobile */
+.navbar-collapse {
+    background-color:#ffffff; /* Add background color */
+ 
+    padding: 15px; /* Add padding for spacing */
+    border-radius: 30px 30px; /* Round bottom corners */
+    color: #000;
+    
+}
+
+/* Ensure the dropdown is positioned below the navbar */
+.navbar-collapse.collapse {
+    position: absolute; /* Set to absolute to control position */
+    top: 65px; /* Adjust to sit just below the navbar */
+    width: 100%;
+    left: 0;
+    
+}
+
+/* Display the collapse menu as a column on mobile */
+.navbar-nav {
+    flex-direction: column;
+    gap: 10px; /* Space between menu items */
+    align-items: center; /* Center-align items */
+    transition: ease-in-out 1s;
+}
+
+.nav-link {
+    color: #000; /* Color for links */
+    font-size: 1.1em;
+}
+    .img-responsive {
+        width: auto; 
+        height: 200px;
+        margin: 0 10px;
+    }
+
+    #poster-4 div, #poster-20 div {
+        overflow-x: scroll;
+    }
+
+    #poster-4 p, #poster-20 p {
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+        width: 133px;
+        font-weight: 200;
+    }
+
+    .img-responsive {
+        width: 267px; 
+        height: 400px;
+        transition: transform 0.2s;
+        border-radius: 10px;
+    }
+    
+    .img-responsive:hover {
+        transform: scale(1.05);
+    }
+
+    .info-buttons {
+        position: absolute; /* Ensure it's positioned over the image */
+        bottom: 20px; /* Distance from the bottom of the image */
+        right: 30px; /* Distance from the left of the image */
+        display: none; /* Arrange items in a row */
+        gap: 10px; /* Space between the "Rating" and "Year" */
+    }
+    
+    .rating-button, .year-button, .runtime-button, .age-rating-button {
+        background: rgba(215, 215, 215, 0.913); /* Individual backgrounds */
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    #poster-4 p, #poster-20 p {
+        font-size: 1em;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px;
+        width: 267px;
+    }
+}
+
+.info-buttons {
+    position: absolute; /* Ensure it's positioned over the image */
+    bottom: 60px; /* Distance from the bottom of the image */
+    right: 30px; /* Distance from the left of the image */
+    display: none; /* Arrange items in a row */
+    gap: 10px; /* Space between the "Rating" and "Year" */
+}
+
+.rating-button, .year-button, .runtime-button, .age-rating-button {
+    background: rgba(215, 215, 215, 0.913); /* Individual backgrounds */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.movie-card {
+    position: relative; 
+    display: inline-block;
+    margin: 15px;
+}
+
+.movie-card:hover .info-buttons {
+    display: flex; 
+    position: absolute; /* Ensure it's positioned over the image */
+    bottom: 60px; /* Distance from the bottom of the image */
+    right: 30px; 
+}
+
+.no-movies {
+    color: white; /* Or any color you prefer */
+    text-align: center;
+    font-size: 40px;
+    margin: 20px auto; /* Centers the message */
+}
+
+#poster-4 svg,
+#poster-20 svg {
+    margin-left: auto; /* Adjust spacing for icons */
+    cursor: pointer; 
+    display: flex; /* Change to inline-block for better alignment */
+    width: 24px; /* Set a consistent width for icons */
+    height: 24px; /* Set a consistent height for icons */
+}
+
+.add-bookmark,
+.remove-bookmark {
+    fill: rgb(0, 0, 0); /* Ensures the icons are visible */
+    stroke: white; /* Set the stroke color to white */
+}
+
+.fa-bars, .bi-list {
+    font-size: 24px; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler:hover {
+    border: none;
+    background: none;
+    box-shadow: none;
+    outline: none; /* Removes the focus outline */
+  }
+
+/*carousel starts here............................................................................................................................................................................................*/
+
+/*Container of the carousel*/
+.flexHomeContainer1{
+    display: flex;
+     flex-direction: row;
+     width: 100%; /* Ensure it fits the screen width */
+     background-color: none;
+     margin: 0 auto; /* Center the content */
+     overflow-x: hidden; /* Prevent horizontal overflow */
+ }
+ 
+ .carousel-caption-home {
+     position: absolute;
+     color: white;
+     background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+     padding: 10px;
+     font-size: 24px;
+     z-index: 2; /* Ensure text is on top */
+ }
+ 
+ .carousel-container-home-header {
+     position: relative;
+     max-height: 700px;
+     margin: auto;
+     overflow: hidden;
+     border: none;
+     background-color: none;
+ }
+ 
+ 
+ .carousel-home {
+     display: flex;
+     transition: transform 0.5s ease-in-out; /* Keep this for smooth sliding */
+ }
+ 
+ .carousel-item {
+     position: relative; /* Important for positioning text inside */
+     box-sizing: border-box;
+     display: none;
+ }
+ 
+ /* Add an overlay to change the color */
+ .carousel-item::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: black;
+     opacity: 0; /* Start with the overlay hidden */
+     transition: opacity 0.4s ease; /* Smooth transition */
+ }
+ 
+ /* Text overlay */
+ .overlay_text_header {
+     position: absolute;
+     top: 40%;  /* Center vertically */
+     left: 20%; /* Center horizontally */
+     transform: translate(-50%, -50%); /* Center alignment */
+     color: white; /* Text color */
+     font-size: 24px;
+     font-weight: bold;
+     font-family: "Roboto", sans-serif;
+     text-align: baseline;
+     opacity: 0; /* Hidden by default */
+     z-index: 1; /* Ensures the text appears above the overlay */
+     transition: opacity 0.4s ease;
+ }
+ 
+ /* Show overlay and text on hover */
+ .carousel-item:hover::before,
+ .carousel-item:hover .overlay_text_header {
+     opacity: 0.9; /* Overlay opacity */
+ }
+ 
+ .carousel-item:hover .overlay_text_header {
+     opacity: 1; /* Show the text */
+ }
+ 
+ .carousel-item.active {
+     display: block;
+ }
+ 
+ .carousel-item img {
+     width: 1700px;
+     height: 1000px;
+ }
+ 
+ .carousel-button {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     background-color: transparent;
+     color: white;
+     font-size: 48px;
+     border: none;
+     padding: 10px;
+     width: 60px;
+ height: 100%;
+ flex-shrink: 0;
+     cursor: pointer;
+     border-radius: 10px;
+     z-index: 1;
+ }
+
+ .prev {
+     left: 0px;
+ }
+ 
+ .next {
+     right: 0px;
+ }
+ 
+ .carousel-button:hover {
+    color: #8BE67D;
+ }
+ 
+ .flexDotContainer {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c2c2c9b;
+    border-radius: 20px;
+    padding: 5px 10px;
+    backdrop-filter: blur(8px);
+ }
+
+ .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #494949;
+    border: 1px #3bff59;
+    border-radius: 50%;
+    cursor: pointer;
+ }
+ 
+ .dot.active {
+    background-color: #3bff59;
+ }
+ 
+ .dot:hover {
+     background-color: rgba(255, 255, 255, 0.8);
+ }
+ 
+ /*carousel ends here............................................................................................................................................................................................*/
+
+
+ .flexMostPopularMoviesContainer {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.flexPopularItem1 img{
+    margin-top: 50px;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.flexPopularItem1Text {
+    margin-top: 50px;
+}
+
+.grid-item {
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    box-sizing: border-box;
+}
+
+/* Styling for "Load More" and "Back to Top" buttons */
+#load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(45, 45, 45);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#load-more:hover {
+    color: #8BE67D;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #72c565;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    fill:#000;
+}
+
+#back-to-top:hover {
+    background-color: #8BE67D;
+}
+
+/* Adjustments for medium-sized screens */
+@media (max-width: 1024px) {
+    .poster-row {
+        width: calc(250px * 3 + 20px * 2);
+    }
+
+    .grid-item {
+        flex: 1 1 calc(33.33% - 40px);
+        max-width: calc(33.33% - 40px);
+    }
+}
+
+/*Three dot Dropdown Movie Buttons start here............................................................................................................................................................................................*/
+
+button.download, button.dislike, button.like, button.love_this {
+    display: flex;
+    flex-direction: row; /* Aligns image and text horizontally */
+    align-items: baseline; /* Aligns text with the baseline of the image */
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+    width: 220px;
+    gap: 10px; /* Consistent spacing between image and text */
+}
+
+button.download img, button.dislike img, button.like img, button.love_this img {
+    width: 24px;
+    height: 24px;
+}
+
+button.download div, button.dislike div, button.like div {
+    display: flex;
+    align-items: flex-start; /* Aligns the start of the text with the image */
+    text-align: start; /* Ensures text aligns to the start */
+}
+
+button.love_this {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 20px; /* Ensures consistency with other buttons */
+    gap: 10px; /* Ensures proper spacing between the image and text */
+}
+
+button.download:hover,
+button.dislike:hover,
+button.like:hover,
+button.love_this:hover {
+    background-color: lightgrey; /* Lighter grey color for hover state */
+}
+
+button.download.active,
+button.dislike.active,
+button.like.active,
+button.love_this.active {
+    background-color: darkgray; /* Darker grey color for clicked state */
+}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: table-column;
+  }
+  
+  ion-icon {
+    color: white;
+    width: 48px;
+    height: 48px;
+    margin-top: 12px;
+    margin-left: 68px;
+    cursor: pointer;
+  }
+
+  ion-icon:hover {
+    stroke-width: 2px;
+    color: gray;
+  } 
+
+  .flexContinueWatchingContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .flexCardContainer1{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 300px; /* Set your desired card width */
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #292929;
+  }
+
+.card-img {
+    width: 300px;
+    height: 420px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.picture_card {
+    position: relative; /* Ensure overlay is positioned correctly */
+    width: 300px;
+    height: 420px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #292929;
+}
+
+.flexIconsContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+/*View More Button Stuff*/
+
+.flexMoreContentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.view_more {
+    display: block;
+    background-color: white;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.view_more:hover {
+    background-color: lightgray;
+}
+
+.view_more.active {
+    background-color: gray;
+}
+
+.more_content {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+}
+
+.more_content {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.more_content.open {
+    max-height: 1000px; /* Arbitrary large value */
+}
+
