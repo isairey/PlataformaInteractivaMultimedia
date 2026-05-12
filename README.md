@@ -122,7 +122,7 @@ El proyecto permitió a los integrantes practicar desarrollo frontend, organizac
 # 📂 Estructura del proyecto
 
 ```bash
-DV_100_405_Bad_Gateway/
+PlataformaInteractivaMultimedia/
 │
 ├── assets/
 ├── css/
@@ -140,7 +140,7 @@ DV_100_405_Bad_Gateway/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/vannesamakatu/DV_100_405_Bad_Gateway
+git clone https://github.com/isairey/PlataformaInteractivaMultimedia
 ```
 
 ---
@@ -238,21 +238,15 @@ git push origin feature/AmazingFeature
 
 ---
 
-# 👨‍💻 Equipo de desarrollo
+# 👨‍💻 Autor
 
 <div align="center">
 
-## 🎬 Development Team
+## Isai Reyes
+
+Desarrollador enfocado en plataformas multimedia modernas y experiencias cinematográficas web.
 
 </div>
-
-| Integrante | Responsabilidad |
-|---|---|
-| Nastasya Brink | Homepage & About Us |
-| David Golding | Library Page & Debugging |
-| Vannesa Makatu | Individual Movie Page & GitHub Setup |
-| Rikus Pretorius | Movie Watchlist & Debugging |
-| Imelda Van Staden | Sign In / Sign Up & Navigation |
 
 ---
 
